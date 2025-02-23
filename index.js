@@ -3,17 +3,16 @@ const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server, {
   cors: {
-    origin: "https://mental-health-prediction-frontend.vercel.app",
-    // origin: "http://localhost:5173",g
+    origin: "*",
     methods: ["GET", "POST"],
-    credentials: true
+    credentials: false
   }
 });
 const cors = require('cors');
 
 app.use(cors({
-  origin: "https://mental-health-prediction-frontend.vercel.app"
-  // origin: "http://localhost:5173/",
+  // origin: "https://mental-health-prediction-frontend.vercel.app"
+  origin: "*",
 }));
 app.use(express.json());
 
