@@ -12,7 +12,7 @@ const cors = require('cors');
 
 app.use(cors({
   // origin: "https://mental-health-prediction-frontend.vercel.app"
-  origin: "*",
+  origin: "https://menta.vercel.app/video-call",
 }));
 app.use(express.json());
 
