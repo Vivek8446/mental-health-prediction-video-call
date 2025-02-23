@@ -3,7 +3,7 @@ const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server, {
   cors: {
-    origin: "https://mental-health-prediction-frontend.vercel.app/video-call",
+    origin: "https://mental-health-prediction-frontend.vercel.app",
     methods: ["GET", "POST"],
     credentials: true
   }
