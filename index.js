@@ -5,7 +5,7 @@ const io = require('socket.io')(server, {
   cors: {
     origin: "https://menta.vercel.app",
     methods: ["GET", "POST"],
-    credentials: false
+    credentials: true
   }
 });
 const cors = require('cors');
