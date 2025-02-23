@@ -4,13 +4,17 @@ const server = require('http').createServer(app);
 const io = require('socket.io')(server, {
   cors: {
     origin: "https://mental-health-prediction-frontend.vercel.app",
+    // origin: "http://localhost:5173",g
     methods: ["GET", "POST"],
     credentials: true
   }
 });
 const cors = require('cors');
 
-app.use(cors());
+app.use(cors({
+  origin: "https://mental-health-prediction-frontend.vercel.app"
+  // origin: "http://localhost:5173/",
+}));
 app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
